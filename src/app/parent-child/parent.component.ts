@@ -15,7 +15,7 @@ using an @Input() property, and display it inside the child's template.
   imports: [CommonModule, ChildComponent],
   template: `
      <h1>PARENT COMPONENT</h1>
-     <app-child-component [user]="currentUser" (roleUpdated)="handleRoleUpdate($event)"></app-child-component>
+     <app-child-component [user]="currentUser" [name]="currentUser.name" (roleUpdated)="handleRoleUpdate($event)"></app-child-component>
   `,
 })
 export class ParentComponent {
