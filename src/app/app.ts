@@ -1,12 +1,13 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { FetchApiComponent } from './fetchapi.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  standalone: true,
+  imports: [CommonModule, FetchApiComponent],
+  template: `
+    <fetchapi-component></fetchapi-component>
+  `,
 })
-export class App {
-  protected readonly title = signal('angular-interview-tasks');
-}
+export class AppComponent {}
