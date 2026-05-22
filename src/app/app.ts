@@ -4,16 +4,18 @@ import { FetchApiComponent } from './fetchapi.component';
 import { ParentComponent } from './parent-child/parent.component';
 import { NgOnChangesParentComponent } from './parent-child/ngonchanges-parent.component';
 import { ViewChildParentComponent } from './parent-child/viewchild-parent.component';
+import { TemplateReferenceParentComponent } from './parent-child/template-refernce-parent.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, ViewChildParentComponent],
+  imports: [CommonModule, TemplateReferenceParentComponent],
   template: `
     <!-- <fetchapi-component></fetchapi-component> -->
     <!-- <parent-child-component></parent-child-component> -->
     <!-- <app-ngonchanges-parent-component></app-ngonchanges-parent-component> -->
-    <app-ngonchanges-parent-component></app-ngonchanges-parent-component>
+    <!-- <app-ngonchanges-parent-component></app-ngonchanges-parent-component> -->
+    <app-template-reference-parent-component></app-template-reference-parent-component>
   `,
 })
 export class AppComponent { }

@@ -2,11 +2,6 @@ import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 import { count } from 'rxjs';
 
-/*
-2). Task 5: Parent Accessing Child Methods via @ViewChild
-The Goal: Sometimes a parent needs to directly trigger an action inside a 
-child without passing data down or waiting for an event.
-*/
 
 @Component({
     selector: 'app-viewchild-child-component',

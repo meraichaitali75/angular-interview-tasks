@@ -2,12 +2,6 @@ import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 import { count } from 'rxjs';
 
-/*
-2). Create a parent component and a child component named UserCard. 
-Pass a user object { name: 'John', role: 'Developer' } from the parent to the child 
-using an @Input() property, and display it inside the child's template.
-*/
-
 @Component({
     selector: 'app-ngonchanges-child-component',
     imports: [CommonModule],
