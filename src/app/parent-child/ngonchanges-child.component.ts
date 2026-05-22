@@ -12,7 +12,7 @@ using an @Input() property, and display it inside the child's template.
     selector: 'app-ngonchanges-child-component',
     imports: [CommonModule],
     template: `
-     <h3>CHILD COMPONENT</h3>
+     <h3>CHILD COMPONENT (NgOnChanges())</h3>
      <p>{{count}}</p>
   `,
 })

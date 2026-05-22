@@ -3,14 +3,16 @@ import { Component } from '@angular/core';
 import { FetchApiComponent } from './fetchapi.component';
 import { ParentComponent } from './parent-child/parent.component';
 import { NgOnChangesParentComponent } from './parent-child/ngonchanges-parent.component';
+import { ViewChildParentComponent } from './parent-child/viewchild-parent.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, NgOnChangesParentComponent],
+  imports: [CommonModule, ViewChildParentComponent],
   template: `
     <!-- <fetchapi-component></fetchapi-component> -->
     <!-- <parent-child-component></parent-child-component> -->
+    <!-- <app-ngonchanges-parent-component></app-ngonchanges-parent-component> -->
     <app-ngonchanges-parent-component></app-ngonchanges-parent-component>
   `,
 })
