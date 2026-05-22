@@ -5,17 +5,19 @@ import { ParentComponent } from './parent-child/parent.component';
 import { NgOnChangesParentComponent } from './parent-child/ngonchanges-parent.component';
 import { ViewChildParentComponent } from './parent-child/viewchild-parent.component';
 import { TemplateReferenceParentComponent } from './parent-child/template-refernce-parent.component';
+import { PassObjectEventEmitterParentComponent } from './parent-child/object-eventemiter-parent.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, TemplateReferenceParentComponent],
+  imports: [CommonModule, PassObjectEventEmitterParentComponent],
   template: `
     <!-- <fetchapi-component></fetchapi-component> -->
     <!-- <parent-child-component></parent-child-component> -->
     <!-- <app-ngonchanges-parent-component></app-ngonchanges-parent-component> -->
     <!-- <app-ngonchanges-parent-component></app-ngonchanges-parent-component> -->
-    <app-template-reference-parent-component></app-template-reference-parent-component>
+    <!-- <app-template-reference-parent-component></app-template-reference-parent-component> -->
+    <app-object-eventemitter-parent-component></app-object-eventemitter-parent-component>
   `,
 })
 export class AppComponent { }
