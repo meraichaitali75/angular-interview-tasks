@@ -14,11 +14,12 @@ import { FilterPipesComponent } from './directives/filter-pipes.component';
 import { HighlightComponent } from './directives/highlight.directive';
 import { SafeNavigationDashboardComponent } from './directives/safe-navigation.component';
 import { CounterTrackerParentComponent } from './services/tracker-card-parent.component';
+import { ProfileParentComponent } from './services/behavioursubject/profile-parent.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, CounterTrackerParentComponent],
+  imports: [CommonModule, ProfileParentComponent],
   template: `
 
     <!-- PARENT-CHILD COMPONENT -->
@@ -38,7 +39,8 @@ import { CounterTrackerParentComponent } from './services/tracker-card-parent.co
 
     <!-- SERVICES -->
     <!-- <fetchapi-component></fetchapi-component> -->
-    <app-parent-tracker-card></app-parent-tracker-card>
+    <!-- <app-parent-tracker-card></app-parent-tracker-card> -->
+    <app-profile-parent></app-profile-parent>
   `,
 })
 export class AppComponent { }
