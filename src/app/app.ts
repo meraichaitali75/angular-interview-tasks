@@ -9,11 +9,15 @@ import { PassObjectEventEmitterParentComponent } from './parent-child/object-eve
 import { GrandParentComponent } from './parent-child/grand-parent.component';
 import { NgContentParentComponent } from './parent-child/ng-content-parent';
 import { DirectiveComponent } from './directives/directive.component';
+import { PipesComponent } from './directives/truncate-pipes.component';
+import { FilterPipesComponent } from './directives/filter-pipes.component';
+import { HighlightComponent } from './directives/highlight.directive';
+import { SafeNavigationDashboardComponent } from './directives/safe-navigation.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, DirectiveComponent],
+  imports: [CommonModule, SafeNavigationDashboardComponent],
   template: `
     <!-- <fetchapi-component></fetchapi-component> -->
     <!-- <parent-child-component></parent-child-component> -->
@@ -22,7 +26,11 @@ import { DirectiveComponent } from './directives/directive.component';
     <!-- <app-template-reference-parent-component></app-template-reference-parent-component> -->
     <!-- <app-object-eventemitter-parent-component></app-object-eventemitter-parent-component> -->
     <!-- <app-ngcontent-parent-component></app-ngcontent-parent-component> -->
-    <app-directive-component></app-directive-component>
+    <!-- <app-directive-component></app-directive-component> -->
+    <!-- <app-pipes-component></app-pipes-component> -->
+    <!-- <app-filter-pipes-component></app-filter-pipes-component> -->
+    <!-- <app-highlight-directive-component></app-highlight-directive-component> -->
+    <app-safe-navigation-dashboard></app-safe-navigation-dashboard>
   `,
 })
 export class AppComponent { }
