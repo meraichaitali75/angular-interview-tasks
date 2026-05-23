@@ -7,11 +7,13 @@ import { ViewChildParentComponent } from './parent-child/viewchild-parent.compon
 import { TemplateReferenceParentComponent } from './parent-child/template-refernce-parent.component';
 import { PassObjectEventEmitterParentComponent } from './parent-child/object-eventemiter-parent.component';
 import { GrandParentComponent } from './parent-child/grand-parent.component';
+import { NgContentParentComponent } from './parent-child/ng-content-parent';
+import { DirectiveComponent } from './directives/directive.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, GrandParentComponent],
+  imports: [CommonModule, DirectiveComponent],
   template: `
     <!-- <fetchapi-component></fetchapi-component> -->
     <!-- <parent-child-component></parent-child-component> -->
@@ -19,7 +21,8 @@ import { GrandParentComponent } from './parent-child/grand-parent.component';
     <!-- <app-ngonchanges-parent-component></app-ngonchanges-parent-component> -->
     <!-- <app-template-reference-parent-component></app-template-reference-parent-component> -->
     <!-- <app-object-eventemitter-parent-component></app-object-eventemitter-parent-component> -->
-    <app-grand-parent-component></app-grand-parent-component>
+    <!-- <app-ngcontent-parent-component></app-ngcontent-parent-component> -->
+    <app-directive-component></app-directive-component>
   `,
 })
 export class AppComponent { }
