@@ -13,24 +13,32 @@ import { PipesComponent } from './directives/truncate-pipes.component';
 import { FilterPipesComponent } from './directives/filter-pipes.component';
 import { HighlightComponent } from './directives/highlight.directive';
 import { SafeNavigationDashboardComponent } from './directives/safe-navigation.component';
+import { CounterTrackerParentComponent } from './services/tracker-card-parent.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, SafeNavigationDashboardComponent],
+  imports: [CommonModule, CounterTrackerParentComponent],
   template: `
-    <!-- <fetchapi-component></fetchapi-component> -->
+
+    <!-- PARENT-CHILD COMPONENT -->
     <!-- <parent-child-component></parent-child-component> -->
     <!-- <app-ngonchanges-parent-component></app-ngonchanges-parent-component> -->
     <!-- <app-ngonchanges-parent-component></app-ngonchanges-parent-component> -->
     <!-- <app-template-reference-parent-component></app-template-reference-parent-component> -->
     <!-- <app-object-eventemitter-parent-component></app-object-eventemitter-parent-component> -->
+
+    <!-- DIRECTIVES -->
     <!-- <app-ngcontent-parent-component></app-ngcontent-parent-component> -->
     <!-- <app-directive-component></app-directive-component> -->
     <!-- <app-pipes-component></app-pipes-component> -->
     <!-- <app-filter-pipes-component></app-filter-pipes-component> -->
     <!-- <app-highlight-directive-component></app-highlight-directive-component> -->
-    <app-safe-navigation-dashboard></app-safe-navigation-dashboard>
+    <!-- <app-safe-navigation-dashboard></app-safe-navigation-dashboard> -->
+
+    <!-- SERVICES -->
+    <!-- <fetchapi-component></fetchapi-component> -->
+    <app-parent-tracker-card></app-parent-tracker-card>
   `,
 })
 export class AppComponent { }
