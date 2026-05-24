@@ -17,11 +17,12 @@ import { CounterTrackerParentComponent } from './services/tracker-card-parent.co
 import { ProfileParentComponent } from './services/behavioursubject/profile-parent.component';
 import { ProfileParentSignalComponent } from './services/signals-store-service/profile-parent-signal.component';
 import { StatusSandboxComponent } from './signals/status-sandbox/status-sandbox.component';
+import { CheckCounterComponent } from './signals/checkout-counter/checkout-counter.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, StatusSandboxComponent],
+  imports: [CommonModule, CheckCounterComponent],
   template: `
 
     <!-- PARENT-CHILD COMPONENT -->
@@ -44,7 +45,8 @@ import { StatusSandboxComponent } from './signals/status-sandbox/status-sandbox.
     <!-- <app-parent-tracker-card></app-parent-tracker-card> -->
     <!-- <app-profile-parent></app-profile-parent> -->
     <!-- <app-profile-parent-signal></app-profile-parent-signal> -->
-    <app-status-sandbox></app-status-sandbox>
+    <!-- <app-status-sandbox></app-status-sandbox> -->
+    <app-check-counter></app-check-counter>
   `,
 })
 export class AppComponent { }
