@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FetchApiComponent } from './api/fetchapi.component';
 import { ParentComponent } from './parent-child/parent.component';
 import { NgOnChangesParentComponent } from './parent-child/ngonchanges-parent.component';
 import { ViewChildParentComponent } from './parent-child/viewchild-parent.component';
@@ -19,11 +18,16 @@ import { ProfileParentSignalComponent } from './services/signals-store-service/p
 import { StatusSandboxComponent } from './signals/status-sandbox/status-sandbox.component';
 import { CheckCounterComponent } from './signals/checkout-counter/checkout-counter.component';
 import { SearchComponent } from './signals/search/search-dashboard.component';
+import { ThemeSandboxComponent } from './theme/theme-sandbox.component';
+
+
+import { FetchApiComponent } from './api/fetchapi.component';
+import { FetchApiDataFromLocalStorageComponent } from './api/fetchapi-localstorage.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, SearchComponent],
+  imports: [CommonModule, FetchApiDataFromLocalStorageComponent],
   template: `
 
     <!-- PARENT-CHILD COMPONENT -->
@@ -43,11 +47,13 @@ import { SearchComponent } from './signals/search/search-dashboard.component';
 
     <!-- SERVICES -->
     <!-- <fetchapi-component></fetchapi-component> -->
+    <fetchapi-localstorage-component></fetchapi-localstorage-component>
     <!-- <app-parent-tracker-card></app-parent-tracker-card> -->
     <!-- <app-profile-parent></app-profile-parent> -->
     <!-- <app-profile-parent-signal></app-profile-parent-signal> -->
     <!-- <app-status-sandbox></app-status-sandbox> -->
-    <app-search-signal></app-search-signal>
+    <!-- <app-search-signal></app-search-signal> -->
+    <!-- <app-theme-component></app-theme-component> -->
   `,
 })
 export class AppComponent { }
