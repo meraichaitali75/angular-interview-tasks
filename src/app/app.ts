@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FetchApiComponent } from './fetchapi.component';
+import { FetchApiComponent } from './api/fetchapi.component';
 import { ParentComponent } from './parent-child/parent.component';
 import { NgOnChangesParentComponent } from './parent-child/ngonchanges-parent.component';
 import { ViewChildParentComponent } from './parent-child/viewchild-parent.component';
@@ -18,11 +18,12 @@ import { ProfileParentComponent } from './services/behavioursubject/profile-pare
 import { ProfileParentSignalComponent } from './services/signals-store-service/profile-parent-signal.component';
 import { StatusSandboxComponent } from './signals/status-sandbox/status-sandbox.component';
 import { CheckCounterComponent } from './signals/checkout-counter/checkout-counter.component';
+import { SearchComponent } from './signals/search/search-dashboard.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, CheckCounterComponent],
+  imports: [CommonModule, SearchComponent],
   template: `
 
     <!-- PARENT-CHILD COMPONENT -->
@@ -46,7 +47,7 @@ import { CheckCounterComponent } from './signals/checkout-counter/checkout-count
     <!-- <app-profile-parent></app-profile-parent> -->
     <!-- <app-profile-parent-signal></app-profile-parent-signal> -->
     <!-- <app-status-sandbox></app-status-sandbox> -->
-    <app-check-counter></app-check-counter>
+    <app-search-signal></app-search-signal>
   `,
 })
 export class AppComponent { }
