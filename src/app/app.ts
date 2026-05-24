@@ -15,11 +15,12 @@ import { HighlightComponent } from './directives/highlight.directive';
 import { SafeNavigationDashboardComponent } from './directives/safe-navigation.component';
 import { CounterTrackerParentComponent } from './services/tracker-card-parent.component';
 import { ProfileParentComponent } from './services/behavioursubject/profile-parent.component';
+import { ProfileParentSignalComponent } from './services/signals-store-service/profile-parent-signal.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, ProfileParentComponent],
+  imports: [CommonModule, ProfileParentSignalComponent],
   template: `
 
     <!-- PARENT-CHILD COMPONENT -->
@@ -40,7 +41,8 @@ import { ProfileParentComponent } from './services/behavioursubject/profile-pare
     <!-- SERVICES -->
     <!-- <fetchapi-component></fetchapi-component> -->
     <!-- <app-parent-tracker-card></app-parent-tracker-card> -->
-    <app-profile-parent></app-profile-parent>
+    <!-- <app-profile-parent></app-profile-parent> -->
+    <app-profile-parent-signal></app-profile-parent-signal>
   `,
 })
 export class AppComponent { }
